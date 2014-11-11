@@ -1,0 +1,50 @@
+<script>
+  var prime = 2;
+  var answer;
+  var next;
+
+  function isPrime(number) {
+    var count;
+
+    // Prime must be whole number greater than 1
+    if (number < 2 || number % 1 != 0) {
+      return false;
+    }
+
+    // Check whether number divisible by other than 1 or itself
+    for(count = 2; count < number; count++)
+      if (number % count == 0) {
+        return false;
+      }
+
+    return true;
+  }
+
+  console.log('The prime numbers are:');
+
+  while (true) {
+
+    // Ask user for prime number until user guesses correctly
+    do {
+
+      if (prime == 2) {
+        answer = prompt('What is the first prime number?');
+      } else {
+        answer = prompt('What is the next prime number?')
+      }
+
+      if (answer == '') break;
+
+    } while (answer != prime);
+
+    if (answer == '') break;
+ 
+    console.log(prime);
+
+    // Compute next prime number
+    do {
+      prime++      
+    } while (!isPrime(prime));
+
+  }
+</script>

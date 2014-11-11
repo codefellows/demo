@@ -1,0 +1,30 @@
+<script>
+  var prime = 2;
+  var answer;
+
+  console.log('The prime numbers are:');
+
+  while (true) {
+
+    // Ask user for prime number until user guesses correctly
+    do {
+
+      if (prime == 2) {
+        answer = prompt('What is the first prime number?');
+      } else {
+        answer = prompt('What is the next prime number?')
+      }
+
+      if (answer == '') break;
+
+    } while (Number(answer) !== prime);
+
+    if (answer == '') break;
+ 
+    console.log(prime);
+
+    // Compute next prime number
+    prime++;
+
+  }
+</script>
