@@ -1,6 +1,32 @@
-<link rel="stylesheet" href="style.css">
+<head>
+  <style>
+#purple {
+  color: purple;
+}
+p:first-of-type {
+  font-weight: bold;
+}
+p, div {
+  background: orange;
+}
+li:nth-of-type(2) {
+  background: blue;
+}
+#purple {
+  color: purple;
+}
+.purple {
+  color: red;
+}
+
+
+p:not(:last-of-type) {
+  font-family: monospace;
+}
+  </style>
+</head>
 <main>
-  <h1>
+  <h1 id="purple" class='purple'>
     Welcome to my game!
   </h1>
   <p>
@@ -17,6 +43,19 @@
     <li>
       Try not to bust!
     </li>
+  </ol>
+  <ol>
+    <div>
+      <li>
+        Click the button to get a card.
+      </li>
+      <li>
+        Decide if you want another card.
+      </li>
+      <li>
+        Try not to bust!
+      </li>
+    </div>
   </ol>
   <p>Good luck playing, hope you have fun! </p>
 </main>
